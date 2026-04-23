@@ -36,6 +36,6 @@ document.querySelectorAll('.slideshow').forEach((slideshow) => {
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
-    }, 3500);
+    }, 4500);
   }
 });
