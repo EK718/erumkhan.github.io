@@ -391,3 +391,25 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Slideshow for portfolio */
+.portfolio-image.slideshow {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #E6DCCB;
+}
+
+.portfolio-image.slideshow .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.portfolio-image.slideshow .slide.active {
+  opacity: 1;
+}
