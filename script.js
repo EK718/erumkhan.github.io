@@ -27,3 +27,15 @@ function reveal() {
 }
 window.addEventListener("scroll", reveal);
 reveal(); // Trigger on load
+document.querySelectorAll('.slideshow').forEach((slideshow) => {
+  const slides = slideshow.querySelectorAll('.slide');
+  let current = 0;
+
+  if (slides.length > 1) {
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3500);
+  }
+});
